@@ -20,7 +20,7 @@ namespace System
         {
             var projectDirectoryPath = _.GetProjectDirectoryPath(projectFilePath);
 
-            var codeDirectoryPath = Instances.PathOperator.AppendDirectoryNameToDirectoryPath(
+            var codeDirectoryPath = Instances.PathOperator.GetDirectoryPath(
                 projectDirectoryPath,
                 Instances.CodeDirectoryName.Code());
 
@@ -32,7 +32,7 @@ namespace System
         {
             var codeDirectoryPath = _.GetCodeDirectoryPath(projectFilePath);
 
-            var basesDirectoryPath = Instances.PathOperator.AppendDirectoryNameToDirectoryPath(
+            var basesDirectoryPath = Instances.PathOperator.GetDirectoryPath(
                 codeDirectoryPath,
                 Instances.CodeDirectoryName.Bases());
 
@@ -44,7 +44,7 @@ namespace System
         {
             var basesDirectoryPath = _.GetBasesDirectoryPath(projectFilePath);
 
-            var basesInterfacesDirectoryPath = Instances.PathOperator.AppendDirectoryNameToDirectoryPath(
+            var basesInterfacesDirectoryPath = Instances.PathOperator.GetDirectoryPath(
                 basesDirectoryPath,
                 Instances.CodeDirectoryName.Interfaces());
 
@@ -56,7 +56,7 @@ namespace System
         {
             var codeDirectoryPath = _.GetCodeDirectoryPath(projectFilePath);
 
-            var interfacesDirectoryPath = Instances.PathOperator.AppendDirectoryNameToDirectoryPath(
+            var interfacesDirectoryPath = Instances.PathOperator.GetDirectoryPath(
                 codeDirectoryPath,
                 Instances.CodeDirectoryName.Interfaces());
 
