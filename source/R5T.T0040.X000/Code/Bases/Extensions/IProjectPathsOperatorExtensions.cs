@@ -20,19 +20,19 @@ namespace System
         }
 
         public static string GetProjectDirectoryPath(this IProjectPathsOperator _,
+            string projectFilePath)
+        {
+            var output = Instances.PathOperator.GetDirectoryPathOfFilePath(projectFilePath);
+            return output;
+        }
+
+        public static string GetProjectDirectoryPath(this IProjectPathsOperator _,
             string parentDirectoryPath,
             string projectName)
         {
             var projectDirectoryName = _.GetProjectDirectoryName(projectName);
 
             var output = Instances.PathOperator.AppendDirectoryRelativePathToDirectoryPath(parentDirectoryPath, projectDirectoryName);
-            return output;
-        }
-
-        public static string GetProjectDirectoryPath(this IProjectPathsOperator _,
-            string projectFilePath)
-        {
-            var output = Instances.PathOperator.GetDirectoryPathOfFilePath(projectFilePath);
             return output;
         }
 
@@ -52,6 +52,18 @@ namespace System
             var projectFileName = Instances.PathOperator.GetFileNameForFilePath(projectFilePath);
 
             var output = Instances.ProjectFileNameOperator.GetProjectNameFromProjectFileName(projectFileName);
+            return output;
+        }
+
+        /// <summary>
+        /// The default project namespace name is just the project name.
+        /// </summary>
+        public static string GetDefaultProjectNamespaceName(this IProjectPathsOperator _,
+            string projectFilePath)
+        {
+            var projectName = _.GetProjectName(projectFilePath);
+
+            var output = projectName; // The default project namespace name is just the project name.
             return output;
         }
     }

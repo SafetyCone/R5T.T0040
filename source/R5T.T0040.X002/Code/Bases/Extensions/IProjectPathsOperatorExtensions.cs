@@ -8,13 +8,6 @@ namespace System
 {
     public static class IProjectPathsOperatorExtensions
     {
-        public static string GetProjectDirectoryPath(this IProjectPathsOperator _,
-            string projectFilePath)
-        {
-            var projectDirectoryPath = Instances.PathOperator.GetDirectoryPathOfFilePath(projectFilePath);
-            return projectDirectoryPath;
-        }
-
         public static string GetCodeDirectoryPath(this IProjectPathsOperator _,
             string projectFilePath)
         {
