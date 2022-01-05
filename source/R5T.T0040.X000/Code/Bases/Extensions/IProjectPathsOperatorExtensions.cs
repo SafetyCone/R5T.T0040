@@ -9,6 +9,22 @@ namespace System
 {
     public static class IProjectPathsOperatorExtensions
     {
+        public static string GetInitialClass1CodeFileRelativePath(this IProjectPathsOperator _)
+        {
+            var output = Instances.CodeFileName.Class1();
+            return output;
+        }
+
+        public static string GetInitialClass1CodeFilePath(this IProjectPathsOperator _,
+            string projectDirectoryPath)
+        {
+            var output = Instances.PathOperator.GetFilePath(
+                projectDirectoryPath,
+                _.GetInitialClass1CodeFileRelativePath());
+
+            return output;
+        }
+
         public static string GetProjectDirectoryName(this IProjectPathsOperator _,
             string projectName)
         {
