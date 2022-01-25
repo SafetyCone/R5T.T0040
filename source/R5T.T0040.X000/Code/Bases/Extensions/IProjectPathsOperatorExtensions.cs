@@ -62,6 +62,19 @@ namespace System
             return output;
         }
 
+        public static string GetProjectFilePathFromSolutionFilePath(this IProjectPathsOperator _,
+           string solutionFilePath,
+           string projectName)
+        {
+            var solutionDirectoryPath = Instances.PathOperator.GetDirectoryPathOfFilePath(solutionFilePath);
+            var projectDirectoryPath = _.GetProjectDirectoryPath(solutionDirectoryPath, projectName);
+
+            var projectFileName = Instances.ProjectFileNameOperator.GetProjectFileName(projectName);
+
+            var output = Instances.PathOperator.GetFilePath(projectDirectoryPath, projectFileName);
+            return output;
+        }
+
         public static string GetProjectName(this IProjectPathsOperator _,
             string projectFilePath)
         {
