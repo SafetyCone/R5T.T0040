@@ -1,4 +1,0 @@
-R5T.T0040.X002 - IProjectPathsOperator extensions implementing the standard project path conventions.
-
-Goals
-

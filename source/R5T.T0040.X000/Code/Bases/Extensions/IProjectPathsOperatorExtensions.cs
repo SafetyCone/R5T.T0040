@@ -36,13 +36,6 @@ namespace System
         }
 
         public static string GetProjectDirectoryPath(this IProjectPathsOperator _,
-            string projectFilePath)
-        {
-            var output = Instances.PathOperator.GetDirectoryPathOfFilePath(projectFilePath);
-            return output;
-        }
-
-        public static string GetProjectDirectoryPath(this IProjectPathsOperator _,
             string parentDirectoryPath,
             string projectName)
         {
