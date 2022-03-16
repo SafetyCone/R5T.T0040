@@ -45,6 +45,13 @@ namespace System
             return output;
         }
 
+        public static string GetProjectFileName(this IProjectPathsOperator _,
+            string projectName)
+        {
+            var output = Instances.ProjectFileNameOperator.GetProjectFileName(projectName);
+            return output;
+        }
+
         public static string GetProjectFilePath(this IProjectPathsOperator _,
             string projectDirectoryPath,
             string projectName)
