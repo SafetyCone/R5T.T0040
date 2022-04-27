@@ -1,0 +1,3 @@
+R5T.T0040.X002 - File system-related project and solution path operations.
+
+GOALS:
