@@ -12,7 +12,7 @@ namespace System
         public static string GetSolutionFileNameStem(this ISolutionFileNameOperator _,
             string solutionName)
         {
-            Instances.PathOperator.VerifyNoInvalidPathCharacters(solutionName);
+            Instances.PathOperator.Verify_NoInvalidPathCharacters(solutionName);
 
             // Just use the solution name as the solution file name stem.
             var output = solutionName;
@@ -31,7 +31,7 @@ namespace System
         public static string GetSolutionNameFromSolutionFileName(this ISolutionFileNameOperator _,
             string solutionFileName)
         {
-            var solutionFileNameStem = Instances.FileNameOperator.GetFileNameStemFromFileName(solutionFileName);
+            var solutionFileNameStem = Instances.FileNameOperator.GetFileNameStem(solutionFileName);
 
             // The solution name is just the solution file name stem.
             var output = solutionFileNameStem;

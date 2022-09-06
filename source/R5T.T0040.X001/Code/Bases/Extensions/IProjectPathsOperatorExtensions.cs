@@ -52,7 +52,7 @@ namespace System
         public static string GetProjectDirectoryPath(this IProjectPathsOperator _,
             string projectFilePath)
         {
-            var output = Instances.PathOperator.GetDirectoryPathOfFilePath(projectFilePath);
+            var output = Instances.PathOperator.GetParentDirectoryPath_ForFile(projectFilePath);
             return output;
         }
 
