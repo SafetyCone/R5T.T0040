@@ -11,6 +11,6 @@ namespace R5T.T0040.X001
     {
         public static IFileExtension FileExtension { get; } = T0032.FileExtension.Instance;
         public static IFileNameOperator FileNameOperator { get; } = F0000.FileNameOperator.Instance;
-        public static IPathOperator PathOperator { get; } = F0002.PathOperator.Instance;
+        public static F0002.IPathOperator PathOperator { get; } = F0002.PathOperator.Instance;
     }
 }
