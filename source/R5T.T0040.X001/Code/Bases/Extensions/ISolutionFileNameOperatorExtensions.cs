@@ -24,7 +24,7 @@ namespace System
         {
             var solutionFileNameStem = _.GetSolutionFileNameStem(solutionName);
 
-            var output = Instances.FileNameOperator.GetFileName(solutionFileNameStem, Instances.FileExtension.Solution());
+            var output = Instances.FileNameOperator.Get_FileName(solutionFileNameStem, Instances.FileExtension.Solution());
             return output;
         }
 
