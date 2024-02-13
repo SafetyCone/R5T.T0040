@@ -15,7 +15,7 @@ namespace System
             string projectDirectoryPath,
             string fileProjectDirectoryRelativePath)
         {
-            var output = Instances.PathOperator.GetFilePath(
+            var output = Instances.PathOperator.Get_FilePath(
                 projectDirectoryPath,
                 fileProjectDirectoryRelativePath);
 
@@ -52,7 +52,7 @@ namespace System
         public static string GetProjectDirectoryPath(this IProjectPathsOperator _,
             string projectFilePath)
         {
-            var output = Instances.PathOperator.GetParentDirectoryPath_ForFile(projectFilePath);
+            var output = Instances.PathOperator.Get_ParentDirectoryPath_ForFile(projectFilePath);
             return output;
         }
 

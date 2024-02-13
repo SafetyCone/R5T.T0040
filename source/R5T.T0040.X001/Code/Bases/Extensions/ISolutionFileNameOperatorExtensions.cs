@@ -31,7 +31,7 @@ namespace System
         public static string GetSolutionNameFromSolutionFileName(this ISolutionFileNameOperator _,
             string solutionFileName)
         {
-            var solutionFileNameStem = Instances.FileNameOperator.GetFileNameStem(solutionFileName);
+            var solutionFileNameStem = Instances.FileNameOperator.Get_FileNameStem(solutionFileName);
 
             // The solution name is just the solution file name stem.
             var output = solutionFileNameStem;
